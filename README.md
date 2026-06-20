@@ -24,12 +24,22 @@ The new skill is written to `~/.claude/skills/<slug>/` and is live immediately.
 
 ## Install
 
-Symlinked into the skills dir (edits here apply live):
+One line:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/qazaqninja/yt2skill/main/install.sh | bash
+```
+
+Then restart Claude Code so it picks up the skill.
+
+<details>
+<summary>Or, for local dev (symlink — edits apply live)</summary>
 
 ```bash
 ln -sf "$PWD/SKILL.md" ~/.claude/skills/yt2skill/SKILL.md
 ln -sf "$PWD/fetch_transcript.py" ~/.claude/skills/yt2skill/fetch_transcript.py
 ```
+</details>
 
 Transcript fetching needs `youtube-transcript-api` (the skill auto-installs it on
 first run): `python3 -m pip install --user youtube-transcript-api`.
