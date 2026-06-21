@@ -32,6 +32,11 @@ curl -fsSL https://raw.githubusercontent.com/qazaqninja/yt2skill/main/install.sh
 
 Then restart Claude Code so it picks up the skill.
 
+The installer pings an anonymous counter so I can see install totals
+([abacus](https://abacus.jasoncameron.dev) — count only, no signup, no PII).
+Check the tally: `curl https://abacus.jasoncameron.dev/get/qazaqninja-yt2skill/install`.
+Opt out: `YT2SKILL_NO_TRACK=1`.
+
 <details>
 <summary>Or, for local dev (symlink — edits apply live)</summary>
 
